@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Balanço Hídrico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <img src='../../../assets/img/agua.jpg' size='small' size-xl>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Qtde. de Liquido Inserida: {{dadosBalanco?.qtdIngerida}} ml</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Qtde. de Liquido Eliminada: {{dadosBalanco?.qtdEliminada}} ml</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Balanço: {{dadosBalanco?.qtdIngerida - dadosBalanco?.qtdEliminada}} ml</ion-label>
+    </ion-item>
+    <ion-item>  
+      <ion-label>Ultima Informação:{{dadosBalanco?.dataControle}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button fill='outline' expand='block' color='success' (click)="presentModal()">Balanço Hidrico</ion-button>
+
+</ion-content>

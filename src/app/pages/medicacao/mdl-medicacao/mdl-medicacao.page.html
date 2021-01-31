@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Configurar Medicação</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]='formConfig'>
+    <ion-item>
+      <ion-label>Hora Inicial</ion-label>
+      <ion-datetime color='success' formControlName='hora' displayFormat="HH:mm"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Intervalo de Tempo</ion-label>
+      <ion-select formControlName='intervalo' placeholder="Selecione...">
+        <ion-select-option value="4">4 em 4 horas</ion-select-option>
+        <ion-select-option value="6">6 em 6 horas</ion-select-option>
+        <ion-select-option value="8">8 em 8 horas</ion-select-option>
+        <ion-select-option value="10">10 em 10 horas</ion-select-option>
+        <ion-select-option value="12">12 em 12 horas</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox formControlName='notificar' color="primary" slot="start"></ion-checkbox>
+      <ion-label>Lembrar horário da medicação</ion-label>
+    </ion-item>
+  </form>
+  <ion-button color='success' (click)="Salvar()">Salvar</ion-button>
+  <ion-button color='success' (click)="dismiss()">Sair</ion-button>
+</ion-content>

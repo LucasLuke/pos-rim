@@ -1,0 +1,7 @@
+{
+  "name": "pos-rim",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

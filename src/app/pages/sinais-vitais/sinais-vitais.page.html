@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Sinais Vitais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size='6' size-lg>
+        <ion-card>
+          <ion-item>
+            <ion-label color='tertiary'>PA</ion-label>
+            <ion-icon color="success" name="heart" slot="start"></ion-icon>
+          </ion-item>
+          <ion-card-content>
+            <ion-badge color='ligth'>
+                <ion-label color="success"><h1> {{dadosColeta?.pa_Max}} > {{dadosColeta?.pa_Min}}</h1>mmHg</ion-label>
+            </ion-badge>
+            <ion-badge color='ligth'>
+              <ion-label  color='danger'><h2> {{dadosColeta?.dataColeta}}</h2>Última coleta</ion-label>
+            </ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size='6' size-md>
+        <ion-card>
+          <ion-item>
+            <ion-label color="tertiary">Pulso</ion-label>
+            <ion-icon color="danger" name="pulse" slot="start"></ion-icon>
+          </ion-item>
+          <ion-card-content>
+            <ion-badge color="ligth">
+                <ion-label color='danger'><h1>{{dadosColeta?.pulso}} Bpm</h1></ion-label>
+            </ion-badge>
+            <ion-badge color='ligth'>
+              <ion-label  color='success'><h2>{{dadosColeta?.dataColeta}}</h2>Última coleta</ion-label>
+            </ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size='6' size-lg>
+        <ion-card>
+          <ion-item>
+            <ion-label color='tertiary'>Temperatura</ion-label>
+            <ion-icon color="warning" name="thermometer-outline" slot="start"></ion-icon>
+          </ion-item>
+          <ion-card-content>
+            <ion-badge color='ligth'>
+                <ion-label color="warning"><h1> {{dadosColeta?.temperatura}} °C</h1></ion-label>
+            </ion-badge>
+            <ion-badge color='ligth'>
+              <ion-label  color='danger'><h2> {{dadosColeta?.dataColeta}}</h2>Última coleta</ion-label>
+            </ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size='6' size-md>
+        <ion-card>
+          <ion-item>
+            <ion-label color="tertiary">Glicose</ion-label>
+            <ion-icon color="medium" name="eyedrop" slot="start"></ion-icon>
+          </ion-item>
+          <ion-card-content>
+            <ion-badge color="ligth">
+                <ion-label color='medium'><h1>{{dadosColeta?.glicose}}  mg/dl</h1></ion-label>
+            </ion-badge>
+            <ion-badge color='ligth'>
+              <ion-label  color='success'><h2> {{dadosColeta?.dataColeta}}</h2>Última coleta</ion-label>
+            </ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
+ <br>
+ {{dtaHora}}
+  <ion-button expand="block" fill="outline" color='success' (click)='coletar()'>Coletar dados</ion-button>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="success-outline">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>

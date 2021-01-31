@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color='success'>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Coletar Sinais Vitais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]='formColeta'> 
+    <ion-item>
+      <ion-label>Pressão Arterial:</ion-label>
+      <ion-input formControlName='pa_Max'></ion-input>><ion-input formControlName='pa_Min'></ion-input>mmHg
+    </ion-item>
+    <ion-item>
+      <ion-label>Pulso:</ion-label>
+      <ion-input formControlName='pulso'></ion-input>Bpm
+    </ion-item>
+    <ion-item>
+      <ion-label>Temperatura:</ion-label>
+      <ion-input formControlName='temperatura'></ion-input>°C
+    </ion-item>
+    <ion-item>
+      <ion-label>Glicose:</ion-label>
+      <ion-input formControlName='glicose'></ion-input>mg/dl
+    </ion-item>
+  </form>
+  <ion-button fill='outline' expand='block' color='success' (click)='SalvarColeta()'>Salvar</ion-button>
+  <ion-button fill='outline' expand='block' color='success' (click)='dismiss()'>Sair</ion-button>
+</ion-content>

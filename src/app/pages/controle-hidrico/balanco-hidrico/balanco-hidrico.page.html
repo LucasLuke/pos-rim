@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="success"> 
+    <ion-title>Cadastrar Controle hídrico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]='formHidrico'>
+      <ion-item>
+        <ion-label>Quantidade Ingerida:</ion-label>
+        <ion-input formControlName='qtdIngerida'></ion-input>mL
+      </ion-item>
+      <ion-item>
+        <ion-label>Quantidade Eliminada:</ion-label>
+        <ion-input formControlName='qtdEliminada'></ion-input>mL
+      </ion-item>
+    </form>
+    <ion-button fill='outline' expand='block' color='success' id="salvar" (click)='Salvar()'>Salvar</ion-button>
+    <ion-button  fill='outline' expand='block' color='success' (click)='dismiss()'>Sair</ion-button>
+</ion-content>
